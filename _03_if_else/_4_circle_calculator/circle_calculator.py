@@ -4,4 +4,17 @@
 # Otherwise, display the circumference of the circle using the radius.
 
 #Area = πr^2
-#Circumference = 2πr 
+#Circumference = 2πr
+
+from math import pi
+from tkinter import messagebox, simpledialog, Tk
+window = Tk()
+window.withdraw()
+value = ""
+radius = simpledialog.askinteger(title = "", prompt = "enter a radius")
+operation = simpledialog.askstring(title = "", prompt = "would you like to calculate the area or circumference?")
+if operation == "area":
+    value = "area=" +str(pi*radius**2)
+else:
+    value = "circumference=" +str(2*pi*radius)
+messagebox.showinfo(title = "", message = value)
