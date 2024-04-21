@@ -27,4 +27,4 @@ elif warrior == warrior6:
 elif warrior == warrior7:
     messagebox.showinfo(title = "", message = "you are great with herbs!")
 else:
-    messagebox.showinfo(title = "", message = "x_x")
+    messagebox.showinfo(title = "", message = "@_@")
