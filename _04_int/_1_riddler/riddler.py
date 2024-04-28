@@ -38,4 +38,4 @@ if riddle3 == answer:
     score = score + 1
 else:
     messagebox.showinfo(title = "", message = "you are incorrect.answer; David.")
-
+messagebox.showinfo(title = "your score is ...", message = str(score))
