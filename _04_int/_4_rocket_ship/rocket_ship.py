@@ -8,11 +8,11 @@ canvas = Canvas(root, width=window_width, height=window_height, borderwidth=0, h
 canvas.grid()
 
 
+
 # This code runs whenever the mouse is clicked on the window
 def mouse_pressed(event):
     # Draws a dark blue background
     canvas.create_rectangle(0, 0, window_width, window_height, fill="#000050")
-
     # x and y will be equal to the mouse pointer's x and y location
     x = event.x
     y = event.y
@@ -21,10 +21,12 @@ def mouse_pressed(event):
     # of a triangle
     points = [x, y, x - 50, y + 100, x + 50, y + 100]
     canvas.create_polygon(points, fill='gray', width=2) # draws triangle
-    
+    print(f"X={x}  Y={y}")
     # 1. Add details to your rocket to make it look better. You can look at
     #    rocket.png for inspiration.
-    
+    y_offset = 80
+    x_offset = 0
+    canvas.create_oval(x + x_offset, y + y_offset, x+5 + x_offset, y+500 + y_offset, fill= "yellow")
     # 2. Modify the locations of the shapes above so the rocket will be drawn
     #    where the mouse is clicked
     
